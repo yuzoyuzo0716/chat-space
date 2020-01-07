@@ -35,17 +35,9 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|null: false| 
-### Association
-- belongs_to :user
-- belongs_to :group
+|body|text|| | 
+|image|string| | 
 
-## photosテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|image|string|null: false| 
 ### Association
 - belongs_to :user
 - belongs_to :group
