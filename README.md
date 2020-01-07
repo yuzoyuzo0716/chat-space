@@ -7,7 +7,6 @@
 |name|string|index| 
 ### Association
 - has_many :messages
-- has_many :photos
 - has_many :groups_users
 - has_many :groups, throuth: groups_users
 
@@ -17,7 +16,6 @@
 |group_name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :photos
 - has_many :groups_users
 - has_many :users, throuth: groups_users
 
