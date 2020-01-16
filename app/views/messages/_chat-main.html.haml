@@ -1,52 +1,52 @@
-.chat-main
-  .main-header
-    .main-header__info
-      %h2.main-header__info__groupname
-        test
-      %ul.main-header__info__member-list
-        Member : 
-        %li.main-header__info__member-list__member
-          masa
-    =link_to "#", class: "edit" do
-      .edit-btn
-        Edit  
-      
-  .massages
-    .massage
-      .massage__info
-        %p.massage__info__tolker
-          masa
-        %p.massage__info__data
-          2020/01/12(Sun) 20:10:03
+  .chat-main
+    .main-header
+      .main-header__info
+        %h2.main-header__info__groupname
+          test
+        %ul.main-header__info__member-list
+          Member : 
+          %li.main-header__info__member-list__member
+            masa
+      =link_to "#", class: "edit" do
+        .edit-btn
+          Edit  
+        
+    .massages
+      .massage
+        .massage__info
+          %p.massage__info__tolker
+            masa
+          %p.massage__info__data
+            2020/01/12(Sun) 20:10:00
 
-      .massage__text
-        おはよう！
+        .massage__text
+          おはよう！
 
-    .massage
-      .massage__info
-        %p.massage__info__tolker
-          masa
-        %p.massage__info__data
-          2020/01/12(Sun) 20:10:03
+      .massage
+        .massage__info
+          %p.massage__info__tolker
+            masa
+          %p.massage__info__data
+            2020/01/12(Sun) 20:10:03
 
-      .massage__text
-        おはよう！
+        .massage__text
+          おはよう！
 
-    .massage
-      .massage__info
-        %p.massage__info__tolker
-          masa
-        %p.massage__info__data
-          2020/01/12(Sun) 20:10:03
+      .massage
+        .massage__info
+          %p.massage__info__tolker
+            masa
+          %p.massage__info__data
+            2020/01/12(Sun) 20:10:03
 
-      .massage__text
-        おはよう！
-      
-  .form
-    %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a massage"}
-        %label{class: "input-box__image"}
-          = icon("far", "image")
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+        .massage__text
+          おはよう！
+        
+    .form
+      %form.new_message
+        .input-box
+          %input{type: "text", class: "input-box__text", placeholder: "type a massage"}
+          %label{class: "input-box__image"}
+            = icon("far", "image")
+            %input{type: "file", class: "input-box__image__file"}
+        %input{type: "submit", class: "submit-btn"}
