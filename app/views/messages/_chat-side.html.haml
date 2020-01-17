@@ -1,22 +1,22 @@
-  .chat-side
-    .side-header
-      .side-header__box
-        %p.side-header__box__username
-          masa
-        %ul.side-header__box__menu
-          %li.side-header__box__edit-user
-          = link_to "#" do
-            =icon('far', 'far fa-edit')
-          %li.sude-header__box__new-group
-          = link_to "#" do
-            =icon('fas', 'cog')
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__username
+        masa
+      %ul.side-header__box__menu
+        %li.side-header__box__edit-user
+        = link_to "#" do
+          =icon('far', 'far fa-edit')
+        %li.sude-header__box__new-group
+        = link_to "#" do
+          =icon('fas', 'cog')
 
-    .groups
-      =link_to "#", class: "group" do
-        %p.group__group-name
-          test
-        %p.group__last-message
-          まだメッセージがありません
+  .groups
+    =link_to "#", class: "group" do
+      %p.group__group-name
+        test
+      %p.group__last-message
+        まだメッセージがありません
 
 
 
