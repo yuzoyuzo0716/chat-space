@@ -40,38 +40,6 @@ $textColor: #ffffff;
     }
   }
 
-  .groups {
-    width: 300px;
-    height: 100vh;
-    display: block;
-    float: left;
-    .side-header {
-      height: 100px;
-      padding: 0 20px;
-      color: $textColor;
-      display: flex;
-      align-items: center;
-      &__box {
-        width: 100%;
-        @include displayFlex-spaceBetween();
-        font-weight: bold;
-        line-height: 20px;
-        &__user-name {
-          font-size: 16px;
-        }
-        &__menu {
-          display: flex;
-          li {
-            margin-left: 5px;
-          }
-          a {
-            color: $textColor;
-          }
-        }
-      }
-  }
-  }
-
     .groups {
       width: 300px;
       height: calc(100vh - 100px);
@@ -81,8 +49,10 @@ $textColor: #ffffff;
           color: $textColor;
           text-decoration: none;
           font-weight: bold;
+          margin-bottom: 40px;
           &__group-name {
             font-size: 15px;
+            margin-bottom: 5px;
           }
           &__last-message {
             font-size: 11px;
