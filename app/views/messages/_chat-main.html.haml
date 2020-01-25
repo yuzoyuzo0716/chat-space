@@ -2,41 +2,25 @@
   .main-header
     .main-header__info
       %h2.main-header__info__groupname
-        = group.name
+        = @group.name
       %ul.main-header__info__member-list
-        Member : 
+        = "Member : "
         %li.main-header__info__member-list__member
-          masa
-    =link_to "#", class: "edit" do
-      .edit-btn
-        Edit  
-      
-  .massages
-    .massage
-      .massage__info
-        %p.massage__info__tolker
-          masa
-        %p.massage__info__data
-          2020/01/12(Sun) 20:10:03
+          = @group.users.pluck(:name).join(", ")
+    .edit-btn
+      =link_to edit_group_path(@group), class: "edit" do
+        .edit
+          = "Edit"  
 
-      .massage__text
-        おはよう！
+  .messages
+    = render partial: 'message', collection: @messages
 
-    .massage
-      .massage__info
-        %p.massage__info__tolker
-          masa
-        %p.massage__info__data
-          2020/01/12(Sun) 20:10:03
 
-      .massage__text
-        おはよう！
-      
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a massage"}
-        %label{class: "input-box__image"}
-          = icon("far", "image")
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+        = f.text_field :content, placeholder: "type a message", class: 'input-box__text'
+        = f.label :image, class: 'input-box__image' do
+          = icon("far", "image", class: 'icon') 
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
