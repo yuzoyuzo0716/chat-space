@@ -9,7 +9,7 @@ $(function(){
                           ${message.user_name}
                         </p>
                         <p class="message__info__data">
-                          ${message.created_at}
+                          ${message.time}
                         </p>
                       </div>
                       <div class="message-main__text">
@@ -26,7 +26,7 @@ $(function(){
                           ${message.user_name}
                         </p>
                         <p class="message__info__data">
-                          ${message.created_at}
+                          ${message.time}
                         </p>
                       </div>
                       <div class="message-main__text">
@@ -43,7 +43,7 @@ $(function(){
                           ${message.user_name}
                         </p>
                         <p class="message__info__data">
-                          ${message.created_at}
+                          ${message.time}
                         </p>
                       </div>
                       <div class="message-main__text">
@@ -88,7 +88,6 @@ $(function(){
       data: {id: last_message_id},
     })
     .done(function(messages) {
-      console.log(messages)
       if (messages.length !== 0) {
         let insertHTML = '';
         $.each(messages, function(i, message) {
