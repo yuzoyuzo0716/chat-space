@@ -98,7 +98,7 @@ $(function(){
     }
   })
     .fail(function() {
-      console.log('error')
+      alert("メッセージの更新に失敗しました。")
     });
   };
 
